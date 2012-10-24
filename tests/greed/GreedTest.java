@@ -12,14 +12,24 @@ public class GreedTest
     @Test
     public void aBadHandScoresZero()
     {
-        greed.roll(new int[] {2, 3, 4, 6, 2});
-        assertThat(greed.score(), equalTo(0));
+        roll(2, 3, 4, 6, 2);
+        assertThatScoreIs(0);
     }
 
     @Test
     public void aSingleOneScores100()
     {
-        greed.roll(new int[] {1, 3, 4, 6, 2});
-        assertThat(greed.score(), equalTo(100));
+        roll(1, 3, 4, 6, 2);
+        assertThatScoreIs(100);
+    }
+
+    private void roll(int die1, int die2, int die3, int die4, int die5)
+    {
+        greed.roll(new int[] {die1, die2, die3, die4, die5});
+    }
+
+    private void assertThatScoreIs(int expectedScore)
+    {
+        assertThat(greed.score(), equalTo(expectedScore));
     }
 }
