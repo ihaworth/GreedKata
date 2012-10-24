@@ -23,6 +23,13 @@ public class GreedTest
         assertThatScoreIs(100);
     }
 
+    @Test
+    public void aSingleOneOnTheSecondDieScores100()
+    {
+        roll(3, 1, 4, 6, 2);
+        assertThatScoreIs(100);
+    }
+
     private void roll(int die1, int die2, int die3, int die4, int die5)
     {
         greed.roll(new int[] {die1, die2, die3, die4, die5});
