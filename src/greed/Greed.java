@@ -8,6 +8,6 @@ public class Greed
 
     public int score()
     {
-        return -1;
+        return 0;
     }
 }
