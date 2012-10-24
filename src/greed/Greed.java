@@ -11,10 +11,10 @@ public class Greed
 
     public int score()
     {
-        if (rolls[0] == 1)
-            return 100;
-        if (rolls[1] == 1)
-            return 100;
+        for (int i = 0; i < rolls.length; i++)
+            if (rolls[i] == 1)
+                return 100;
+
         return 0;
     }
 }
