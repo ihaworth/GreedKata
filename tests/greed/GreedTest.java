@@ -15,4 +15,11 @@ public class GreedTest
         greed.roll(new int[] {2, 3, 4, 6, 2});
         assertThat(greed.score(), equalTo(0));
     }
+
+    @Test
+    public void aSingleOneScores100()
+    {
+        greed.roll(new int[] {1, 3, 4, 6, 2});
+        assertThat(greed.score(), equalTo(100));
+    }
 }
