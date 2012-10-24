@@ -2,6 +2,8 @@ package greed;
 
 public class Greed
 {
+    private static final int MAX_FACE_VALUE = 6;
+
     private int[] rolls;
 
     public void roll(int[] rolls)
@@ -13,14 +15,13 @@ public class Greed
     {
         int score = 0;
 
-        for (int i = 0; i < rolls.length; i++)
-        {
-            if (rolls[i] == 1)
-                score += 100;
+        int[] faceValueCounts = new int[MAX_FACE_VALUE + 1];
 
-            if (rolls[i] == 5)
-                score += 50;
-        }
+        for (int i = 0; i < rolls.length; i++)
+            faceValueCounts[rolls[i]]++;
+
+        score += faceValueCounts[1] * 100;
+        score += faceValueCounts[5] * 50;
 
         return score;
     }
