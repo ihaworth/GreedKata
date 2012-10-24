@@ -3,6 +3,7 @@ package greed;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertThat;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class GreedTest
@@ -44,6 +45,7 @@ public class GreedTest
         assertThatScoreIs(50);
     }
 
+    @Ignore
     @Test
     public void tripleOnesScore1000()
     {
