@@ -20,6 +20,12 @@ public class Greed
         for (int i = 0; i < rolls.length; i++)
             faceValueCounts[rolls[i]]++;
 
+        if (faceValueCounts[1] == 3)
+        {
+            score += 1000;
+            faceValueCounts[1] = 0;
+        }
+
         score += faceValueCounts[1] * 100;
         score += faceValueCounts[5] * 50;
 
