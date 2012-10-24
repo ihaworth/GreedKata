@@ -13,6 +13,8 @@ public class Greed
     {
         if (rolls[0] == 1)
             return 100;
+        if (rolls[1] == 1)
+            return 100;
         return 0;
     }
 }
