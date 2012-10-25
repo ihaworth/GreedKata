@@ -25,6 +25,7 @@ public class Greed
 
         scoreTriple(1);
         scoreTriple(2);
+        scoreTriple(3);
 
         score += faceValueCounts[1] * 100;
         score += faceValueCounts[5] * 50;
@@ -46,7 +47,7 @@ public class Greed
     {
         if (faceValue == 1)
             return 1000;
-        return 200;
+        return faceValue * 100;
     }
 }
 
