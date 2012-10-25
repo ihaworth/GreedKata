@@ -23,11 +23,8 @@ public class Greed
         for (int i = 0; i < rolls.length; i++)
             faceValueCounts[rolls[i]]++;
 
-        scoreTriple(1);
-        scoreTriple(2);
-        scoreTriple(3);
-        scoreTriple(4);
-        scoreTriple(5);
+        for (int faceValue = 1; faceValue <= 5; faceValue++)
+            scoreTriple(faceValue);
 
         score += faceValueCounts[1] * 100;
         score += faceValueCounts[5] * 50;
