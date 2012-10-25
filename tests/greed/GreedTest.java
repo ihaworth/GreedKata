@@ -79,6 +79,13 @@ public class GreedTest
         assertThatScoreIs(400);
     }
 
+    @Test
+    public void tripleFivesScore500()
+    {
+        roll(5, 5, 5, 6, 2);
+        assertThatScoreIs(500);
+    }
+
     private void roll(int die1, int die2, int die3, int die4, int die5)
     {
         greed.roll(new int[] {die1, die2, die3, die4, die5});
