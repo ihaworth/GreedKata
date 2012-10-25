@@ -27,6 +27,7 @@ public class Greed
         scoreTriple(2);
         scoreTriple(3);
         scoreTriple(4);
+        scoreTriple(5);
 
         score += faceValueCounts[1] * 100;
         score += faceValueCounts[5] * 50;
