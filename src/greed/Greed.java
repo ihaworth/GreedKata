@@ -26,6 +26,12 @@ public class Greed
             faceValueCounts[1] -= 3;
         }
 
+        if (faceValueCounts[2] >= 3)
+        {
+            score += 200;
+            faceValueCounts[2] -= 3;
+        }
+
         score += faceValueCounts[1] * 100;
         score += faceValueCounts[5] * 50;
 
